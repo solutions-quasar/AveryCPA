@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} | Avery & Associates CPA Moncton</title>
+    <meta name="description" content="{{description}}">
+    <link rel="canonical" href="https://averycpa.ca{{path}}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:url" content="https://averycpa.ca{{path}}">
+    <meta property="og:title" content="{{title}} | Avery & Associates CPA">
+    <meta property="og:description" content="{{description}}">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <!-- Schema Injection -->
+    {{schema}}
+
+    <!-- Mobile Sticky Bar -->
+    {{mobile_bar}}
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <span class="logo-text">Avery<span class="highlight">& Associates</span></span>
+                <span class="logo-sub">CPA Moncton</span>
+            </a>
+            <nav class="desktop-nav">
+                <a href="/services/">Services</a>
+                <a href="/industries/">Industries</a>
+                <a href="/about/">About</a>
+                <a href="/resources/">Resources</a>
+                <a href="/contact/">Contact</a>
+            </nav>
+            <div class="desktop-cta">
+                <a href="/book-consultation/" class="btn-primary">Book Consultation</a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="logo-text-mobile">Avery & Associates</span>
+            <button class="menu-close"><i class="ph ph-x"></i></button>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="/">Home</a>
+            <a href="/services/">Services</a>
+            <a href="/industries/">Industries</a>
+            <a href="/about/">About Us</a>
+            <a href="/lead-magnet-checklist/">Tax Checklist</a>
+            <a href="/contact/">Contact</a>
+            <a href="/book-consultation/" class="btn-primary-mobile">Book Consultation</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        {{content}}
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Avery & Associates</h3>
+                <p>Chartered Professional Accountants serving Moncton and New Brunswick since 2009.</p>
+                <div class="footer-contact">
+                    <p><i class="ph-fill ph-phone"></i> <a href="{{phone_url}}">{{phone}}</a></p>
+                    <p><i class="ph-fill ph-envelope"></i> <a href="mailto:{{email}}">{{email}}</a></p>
+                    <p><i class="ph-fill ph-map-pin"></i> {{address}}, {{city}}</p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Our Services</h3>
+                <ul>
+                    {{services_links}}
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Industries</h3>
+                <ul>
+                    {{industries_links}}
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/reviews/">Reviews</a></li>
+                    <li><a href="/lead-magnet-checklist/">Free Tax Checklist</a></li>
+                    <li><a href="/book-consultation/">Book Consultation</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; 2025 Avery & Associates CPA. | <a href="/privacy-policy/">Privacy</a> | <a
+                        href="/terms-of-service/">Terms</a> | <a href="/accessibility/">Accessibility</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>
