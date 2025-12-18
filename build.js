@@ -72,18 +72,29 @@ ensureDir(path.join(__dirname, 'dist'));
 ensureDir(path.join(__dirname, 'dist/assets/css'));
 ensureDir(path.join(__dirname, 'dist/assets/js'));
 
-// Copy Assets (Mock copy for now - real sync would happen here)
-if (fs.existsSync(path.join(__dirname, 'src/assets/css/style.css'))) {
-    fs.copyFileSync(
-        path.join(__dirname, 'src/assets/css/style.css'),
-        path.join(__dirname, 'dist/assets/css/style.css')
-    );
+// Header
+function copyRecursiveSync(src, dest) {
+    const exists = fs.existsSync(src);
+    const stats = exists && fs.statSync(src);
+    const isDirectory = exists && stats.isDirectory();
+    if (isDirectory) {
+        if (!fs.existsSync(dest)) {
+            fs.mkdirSync(dest);
+        }
+        fs.readdirSync(src).forEach(function (childItemName) {
+            copyRecursiveSync(path.join(src, childItemName),
+                path.join(dest, childItemName));
+        });
+    } else {
+        fs.copyFileSync(src, dest);
+    }
 }
 
-if (fs.existsSync(path.join(__dirname, 'src/assets/js/main.js'))) {
-    fs.copyFileSync(
-        path.join(__dirname, 'src/assets/js/main.js'),
-        path.join(__dirname, 'dist/assets/js/main.js')
+// Copy All Assets
+if (fs.existsSync(path.join(__dirname, 'src/assets'))) {
+    copyRecursiveSync(
+        path.join(__dirname, 'src/assets'),
+        path.join(__dirname, 'dist/assets')
     );
 }
 
