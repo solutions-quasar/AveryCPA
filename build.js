@@ -37,10 +37,15 @@ const mobileBar = `
 function buildPage(pageData, outputPath) {
     let html = layout;
 
+    // Calculate Relative Path for Assets
+    const depth = outputPath.split('/').length - 2; // e.g. /index.html -> 0, /about/index.html -> 1
+    const relativeRoot = depth > 0 ? '../'.repeat(depth).slice(0, -1) : '.';
+
     // Global Replacements
     html = html.replace(/{{title}}/g, pageData.title);
     html = html.replace(/{{description}}/g, pageData.description);
     html = html.replace(/{{path}}/g, pageData.path);
+    html = html.replace(/{{base_path}}/g, relativeRoot);
     html = html.replace('{{schema}}', pageData.schema || '');
     html = html.replace('{{mobile_bar}}', mobileBar);
     html = html.replace('{{content}}', pageData.content);
