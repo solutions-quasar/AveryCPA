@@ -165,7 +165,7 @@ const pages = [
                         </div>
                         <div style="position: relative;">
                             <!-- Placeholder grey box replaced with actual image -->
-                            <img src="/assets/images/portrait.png" alt="Joe Avery, Principal CPA" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
+                            <img src="assets/images/portrait.png" alt="Joe Avery, Principal CPA" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
                         </div>
                     </div>
                 </div>
@@ -209,7 +209,7 @@ const pages = [
                             <p><strong>Joe Avery, CPA</strong> leads the firm with a focus on proactive tax strategies. He believes in meeting clients where they are and guiding them to financial stability.</p>
                         </div>
                         <div style="text-align: center;">
-                            <img src="/assets/images/joe_avery.jpg" alt="Joe Avery, CPA" style="border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); max-width: 100%; height: auto;">
+                            <img src="../assets/images/joe_avery.jpg" alt="Joe Avery, CPA" style="border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); max-width: 100%; height: auto;">
                         </div>
                     </div>
                 </div>
