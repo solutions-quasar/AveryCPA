@@ -1,0 +1,303 @@
+:root {
+    --primary: #0F172A;
+    --primary-light: #1E293B;
+    --accent: #D4AF37;
+    --accent-hover: #AA8C2C;
+    --text-dark: #334155;
+    --text-light: #94A3B8;
+    --bg-light: #F8FAFC;
+    --white: #FFFFFF;
+    --border: #E2E8F0;
+
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Outfit', sans-serif;
+
+    --container: 1200px;
+    --nav-height: 80px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding-bottom: 60px;
+    /* Mobile bar space */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Layout */
+.container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Header */
+.site-header {
+    height: var(--nav-height);
+    background: var(--white);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.logo-text .highlight {
+    color: var(--accent);
+}
+
+.logo-sub {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    font-family: var(--font-body);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.desktop-nav {
+    display: none;
+    gap: 2rem;
+}
+
+.desktop-nav a {
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.desktop-nav a:hover {
+    color: var(--accent);
+}
+
+.desktop-cta {
+    display: none;
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--accent);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: var(--white);
+    z-index: 200;
+    transform: translateX(100%);
+    transition: 0.3s;
+    padding: 2rem;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Mobile Sticky Bar */
+.mobile-sticky-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    display: flex;
+    z-index: 99;
+}
+
+.sticky-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    gap: 4px;
+    color: var(--text-dark);
+}
+
+.sticky-btn.call {
+    background: var(--accent);
+    color: var(--white);
+}
+
+.sticky-btn.book {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* Hero Generic */
+.page-hero {
+    background: var(--primary);
+    color: var(--white);
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.page-hero h1 {
+    color: var(--white);
+}
+
+/* Footer */
+.site-footer {
+    background: var(--primary);
+    color: var(--text-light);
+    padding: 4rem 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr;
+    margin-bottom: 3rem;
+}
+
+.footer-col h3 {
+    color: var(--white);
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-body);
+}
+
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-contact i {
+    color: var(--accent);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    font-size: 0.875rem;
+}
+
+/* Lead Magnet Form */
+.magnet-box {
+    background: var(--bg-light);
+    border: 2px dashed var(--accent);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding-bottom: 0;
+    }
+
+    .mobile-sticky-bar {
+        display: none;
+    }
+
+    .desktop-nav,
+    .desktop-cta {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
